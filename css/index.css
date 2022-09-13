@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Quicksand:wght@300;400;500;600&display=swap');
+
+:root {
+    --sand_cstm: 'Quicksand', sans-serif;
+    --oswald_cstm: 'Oswald', sans-serif;
+    --color_1: #4070f4;
+}
+
+.navbar-custom {
+
+    height: 65px;
+
+}
+
+.navbar-title-marginLeft-custom {
+
+    margin-left: 30px;
+
+}
+
+.navbar-title-marginRight-custom {
+    margin-right: 35px;
+}
+
+.navbar-item-paddig-custom {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav-font-cstm {
+
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
+}
+
+.hm-lg-fnt {
+    font-size: 56px;
+}
+
+.color_hm_1 {
+    color: var(--color_1);
+}
+
+.cen-cst-hm,
+.cen-cst-hm>h2 {
+    align-content: center;
+    margin: auto;
+}
+
+.bt-res-hm {
+
+    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+    color: black;
+}
+
+.main-mg-tp {
+    margin-top: 120px;
+}
+
+.profile-img {
+    width: 400px;
+    height: 430px;
+    margin: auto;
+    display: block;
+    border-radius: 100%;
+}
+
+
+
+/* About */
+#about {
+    margin-top: 125px;
+}
+
+
+/* xLarge */
+/* @media all and (min-width:769px) and (max-width:991px) {} */
+
+/* Large */
+@media all and (min-width:992px) and (max-width:1200px) {}
+
+/* Medium */
+@media all and (min-width:768px) and (max-width:991px) {
+    .nb-mg-tp {
+        margin-top: 20px;
+    }
+
+    .profile-img {
+        width: 400px;
+        height: 380px;
+        margin: auto;
+        margin-top: 60px;
+        display: block;
+        border-radius: 100%;
+    }
+
+    #svg-spc {
+
+        margin-left: 20px;
+
+    }
+}
+
+/* Small */
+@media all and (min-width: 576px) and (max-width:767px) {
+    .nb-mg-tp {
+        margin-top: 20px;
+    }
+
+    .hm-lg-fnt {
+        font-size: 2.5rem;
+    }
+
+    .profile-img {
+        width: 320px;
+        height: 280px;
+        display: block;
+        margin-top: 0px;
+    }
+
+    #svg-spc {
+
+        margin-left: 20px;
+
+    }
+
+}
+
+/* Extra Small */
+@media all and (min-width: 100px) and (max-width:576px) {
+    .nb-mg-tp {
+        margin-top: 20px;
+    }
+
+    .hm-lg-fnt {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: auto;
+        display: block;
+        margin-top: 0px;
+    }
+
+    #svg-spc {
+
+        margin-left: 20px;
+
+    }
+}
