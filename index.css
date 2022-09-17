@@ -6,6 +6,158 @@
     --color_1: #4070f4;
 }
 
+/* Navbar */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+header {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header_cst {
+    padding: 0 4.8rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F2F2;
+
+}
+
+.header_cst .logo {
+    height: 2.5rem;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 3.8rem;
+    list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #212529;
+    transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: #364fc7;
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-nav-icon-cst {
+    width: 4rem;
+    height: 4rem;
+    color: #212529;
+}
+
+.mobile-nav-icon-cst[name="close-outline"] {
+    display: none;
+}
+
+/* 980px  */
+@media (max-width: 62em) {
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+        border: 3px solid #212529;
+        color: #212529;
+    }
+
+    .header_cst {
+        position: relative;
+    }
+
+    .header_cst .logo {
+        width: 20%;
+
+    }
+
+    .navbar_cst {
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background: #e7f5ff;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* to get the tranisition  */
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar_cst {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon-cst[name="close-outline"] {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon-cst[name="menu-outline"] {
+        display: none;
+    }
+}
+
+/* Below 560px  */
+@media (max-width: 35em) {
+    .header_cst {
+        padding: 0 2.4rem;
+    }
+
+    .header_cst .logo {
+        width: 20%;
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+
+    #hd_img {
+        width: 20%;
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+}
+
 .navbar-item-paddig-custom {
     padding-left: 8px;
     padding-right: 8px;
@@ -46,12 +198,9 @@
     margin-top: 120px;
 }
 
-.profile-img {
-    width: 400px;
-    height: 430px;
-    margin: auto;
-    display: block;
-    border-radius: 100%;
+#profile-img {
+    max-width: 80%;
+    height: auto;
 }
 
 
@@ -113,19 +262,19 @@
         margin-top: 20px;
     }
 
-    .profile-img {
-        width: 400px;
-        height: 380px;
-        margin: auto;
-        margin-top: 60px;
-        display: block;
-        border-radius: 100%;
+    #profile-img {
+        max-width: 100%;
+        height: auto;
     }
 
     #svg-spc {
 
         margin-left: 20px;
 
+    }
+
+    .nav-dark-cst {
+        background-color: lightblue;
     }
 }
 
@@ -139,17 +288,26 @@
         font-size: 2.5rem;
     }
 
-    .profile-img {
-        width: 320px;
-        height: 280px;
-        display: block;
-        margin-top: 0px;
+    #profile-img {
+        max-width: 100%;
+        height: auto;
     }
 
     #svg-spc {
 
         margin-left: 20px;
 
+    }
+
+    .nav-dark-cst {
+        background-color: lightblue;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    #navbarSupportedContent {
+        max-width: 100vw;
+        max-height: 100vh;
     }
 
 }
@@ -164,16 +322,29 @@
         font-size: 2rem;
     }
 
-    .profile-img {
-        width: 250px;
+    #profile-img {
+        max-width: 110%;
         height: auto;
-        display: block;
-        margin-top: 0px;
+        margin-right: 10px;
     }
 
     #svg-spc {
 
         margin-left: 20px;
 
+    }
+
+
+    .nav-dark-cst {
+        background-color: lightblue;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    #navbarSupportedContent {
+        max-width: 100vw;
+        max-height: 100vh;
+        /* width: 100%;
+        height: 100%; */
     }
 }
