@@ -289,6 +289,8 @@ body {
     justify-content: center;
 }
 
+
+
 /* xLarge */
 /* @media all and (min-width:769px) and (max-width:991px) {} */
 
@@ -419,4 +421,13 @@ body {
         flex: 0 0 auto;
         width: 25%;
     }
+
+    .git-stats-ext {
+        width: 100%;
+    }
+
+    .git-stats-ext img {
+        width: 100%;
+    }
+
 }
