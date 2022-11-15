@@ -14,7 +14,7 @@
 
 <body>
 
-    <header class="header_cst fixed-top" style="height: 70px;">
+    <header class="header_cst fixed-top" style="height: 70px; position: fixed;">
         <img id="hd_img" src="https://svgsilh.com/svg/2051705.svg" alt="J" class="logo" />
 
         <nav class="navbar_cst" style="font-size: 18px;">
@@ -27,7 +27,8 @@
                     <a class="navbar-link" style="font-size: 18px;" href="#contact">Contact</a>
                 </li>
                 <li>
-                    <a class="navbar-link" style="font-size: 18px;" href="Jitendra.pdf" download>Resume</a>
+                    <a class="navbar-link" target="_blank" id="resume_nav" style="font-size: 18px;"
+                        href="Jitendra_Choudhary_Resume.pdf" download>Resume</a>
                 </li>
             </ul>
         </nav>
@@ -36,6 +37,7 @@
             <ion-icon name="menu-outline" style="width: 35px; height: 35px;" class="mobile-nav-icon-cst"></ion-icon>
             <ion-icon name="close-outline" style="width: 35px; height: 30px;" class="mobile-nav-icon-cst"></ion-icon>
         </div>
+
     </header>
     <div class="container ">
 
@@ -45,9 +47,9 @@
                     Hi 👋,<br />I'am <span class="color_hm_1">Jitendra</span><br />
                     JAVA Developer
                 </h2>
-                <a href="Jitendra.pdf" download>
+                <a href="Jitendra_Choudhary_Resume.pdf" download id="body_resume">
                     <button type="button" target="_blank"
-                        class="btn shadow-sm  bt-res-hm btn-outline-primary ">Resume</button>
+                        class="btn shadow-sm  bt-res-hm btn-outline-primary">Resume</button>
                 </a>
                 <div class="row">
                     <div class="col-1">
@@ -365,6 +367,24 @@
 
             <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img class="img-fluid"
                         src="https://github-profile-trophy.vercel.app/?username=jitu7989" alt="jitu7989" /></a> </p>
+
+            <div class="git-stats-ext"
+                style="margin: auto; display: flex; justify-content: center; margin-bottom: 20px; margin-top: 10px;">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=jitu7989&theme=#5687C7" />
+            </div>
+
+            <div class="git-stats-ext"
+                style="margin: auto; display: flex; justify-content: center; margin-bottom: 20px;">
+                <img
+                    src="https://github-readme-stats.vercel.app/api?username=jitu7989&show_icons=true&locale=en&theme=#5687C7" />
+            </div>
+
+            <div class="git-stats-ext"
+                style="margin: auto; display: flex; justify-content: center; margin-bottom: 20px;">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jitu7989&theme=#5687C7&langs_count=8"
+                    alt="spvhantale" />
+            </div>
+
         </div>
 
         <div class="row git-col">
@@ -468,35 +488,38 @@
 
 </html>
 <script>
-    const mobile_nav = document.querySelector(".mobile-navbar-btn");
-    const nav_header = document.querySelector(".header_cst");
 
-    const toggleNavbar = () => {
+    document.getElementById("resume_nav").addEventListener("click", () => {
+        window.open("https://drive.google.com/file/d/1jPZKIzz85-5ZtgXmfSIR4Tzqe87pXdXl/view", "_blank")
+    })
+    document.getElementById("body_resume").addEventListener("click", () => {
+        window.open("https://drive.google.com/file/d/1jPZKIzz85-5ZtgXmfSIR4Tzqe87pXdXl/view", "_blank")
+    })
 
-        nav_header.classList.toggle("active");
-
-    };
-
-    mobile_nav.addEventListener("click", () => toggleNavbar());
+    const MOBILE_NAV = document.querySelector(".mobile-navbar-btn");
+    const NAV_HEADER = document.querySelector(".header_cst");
 
     const clip = document.getElementById("clip-abt");
 
+    const toggleNavbar = () => {
+        NAV_HEADER.classList.toggle("active");
+    };
+
+    MOBILE_NAV.addEventListener("click", () => toggleNavbar());
+
+    const NAV_DIV = document.getElementsByClassName("navbar-link");
+
+    for (let i of NAV_DIV) i.addEventListener("click", () => toggleNavbar());
+
+
     clip.addEventListener("click", () => {
         copyToClip();
-    })
-
+    });
     function copyToClip() {
-
-
-        // Copy the text inside the text field
         navigator.clipboard.writeText("choudharyjitendra7989@gmail.com");
-
-        // Alert the copied text
         alert("Mail copied");
     }
-    // GitHubCalendar(".calendar", "your-username");
-    // // or enable responsive functionality
-//     GitHubCalendar(".calendar", "jitu7989", { responsive: true });
+
     GitHubCalendar(".calendar", "jitu7989", { responsive: true, tooltips: true, global_stats: false, });
 
 </script>
